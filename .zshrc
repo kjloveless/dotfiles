@@ -262,3 +262,6 @@ fi
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/go/bin
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_ed25519
