@@ -20,6 +20,12 @@ set softtabstop=4
 set expandtab
 set noshiftround
 
+if has("autocmd")
+  " If the filetype is Makefile then we need to use tabs
+  " so do not expand tabs into space.
+  autocmd FileType make    set noexpandtab
+endif
+
 " Cursor motion
 set scrolloff=3
 set backspace=indent,eol,start
